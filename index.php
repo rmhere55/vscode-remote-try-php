@@ -1,5 +1,9 @@
 <?php
-// class
+// 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
 // class fruit {
 // 	public $name;
 // 	public $color;
@@ -52,25 +56,60 @@
 // function __destruct(){
 // 	echo"the fruit is {$this->name} ant the color is {$this->color}";
 // }
+// }
+
+// $apple = new fruit("Apple", "sdfsd");
+
+
+// print_r($apple);
+
+
+
 
 ?>
 
 
-
+ 
 
 <html>
 	<head>
 		<title>Visual Studio Code Remote :: PHP</title>
 	</head>
 	<body>
+		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  >
+			name <input type="text" name="name">
+			age <input type="text " name="age">
+			<input type="submit" value="submit">
+		</form>
 		<?php 
 		
 		 echo "hyyy hlooo";	
 
 		//  destracter
+//  get and post 
+// get
 
-		   
+// if (isset($_GET["name"])|| isset($_GET["age"])){
+// 	echo "hi ". $_GET['name']."<br/>";
+// 	echo "your age is ". $_GET['age']."<br/>";
+// 	exit();
+	
+// }
+// post
+if (isset($_POST["submit"])){
+	echo "hi ". $_POST['name']."<br/>";
+	echo "your age is ". $_POST['age']."<br/>";
+	exit();
+	} else {
+		echo "we only speak english";
 		
+	}
+	
+
+
+
+	
 		?>
+		
 	</body>
 </html>
